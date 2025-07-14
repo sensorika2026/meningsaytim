@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Outfit";
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    box-shadow: 0px 0px 10px black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 11111;
+}
+
+nav .logo {
+    font-size: 30px;
+    transition: 0.3s all;
+}
+
+nav .logo:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: black;
+    position: relative;
+}
+
+nav ul li a::before {
+    content: "";
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    background-color: black;
+    bottom: 0;
+    transition: 0.3s all;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+}
+
+/* HEADER */
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(135deg, rgba(4, 60, 246, 0.8), rgba(151, 0, 151, 0.8));
+}
+
+header h1 {
+    font-size: 60px;
+    color: white;
+}
+
+header p {
+    margin-top: 20px;
+    color: white;
+}
+
+header button {
+    margin-top: 20px;
+    padding: 15px 25px;
+    font-size: 20px;
+    border-radius: 30px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    background-color: orangered;
+    color: white;
+    transition: 0.3s all;
+}
+
+header button::before {
+    content: "";
+    width: 25px;
+    height: 100%;
+    position: absolute;
+    background-color: azure;
+    top: 0;
+    transition: 0.3s all;
+    transform: translateX(-100px);
+    filter: blur(20px);
+} 
+
+header button:hover::before {
+    transform: translateX(300px);
+}
+
+/* SOTUVLAR SECTION */
+
+.sotuvlar {
+    height: 250px;
+    background-color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sotuvlar .box {
+    width: 300px;
+    height: 170px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sotuvlar .box h1 {
+    font-size: 50px;
+    color: orange;
+}
+
+.sotuvlar .box p {
+    color: white;
+    font-weight: 600;
+}
+
+/* Mashinalar section */
+
+.mashinalar {
+    height: 100%;
+    padding: 20px;
+}
+
+.mashinalar .titlee {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.mashinalar .titlee::before {
+    position: absolute;
+    content: "";
+    width: 70px;
+    height: 3px;
+    background-color: blue;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.mashinalar p {
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.kategoriyalar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.kategoriyalar a {
+    border: 2px solid blue;
+    padding: 15px 25px;
+    margin: 0 10px;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+.kategoriyalar a:first-child {
+    background-color: blue;
+    color: white;
+}
+
+/* CARS section */
+
+.cars {
+    margin-top: 30px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.car {
+    display: flex;
+    flex-direction: column;
+    height: 430px;
+    width: 300px;
+    border: 1px solid red;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s all;
+    margin: 20px;
+}
+
+.car:hover {
+    box-shadow: 0px 2px 10px gray;
+    transform: translateY(-10px);
+}
+
+.car .top {
+    background-image: linear-gradient(135deg, rgba(4, 60, 246, 0.8), rgba(151, 0, 151, 0.8));
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.car .top span {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: orangered;
+    padding: 5px 15px;
+    border-radius: 30px;
+    color: white;
+}
+
+.car .top p {
+    font-size: 50px;
+}
+
+.car .bottom {
+    text-align: left;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    flex-direction: column;
+    height: 50%;
+}
+
+.car .narx {
+    font-size: 50px;
+    color: red;
+}
+
+.car .malumotlar span {
+    margin: 0 4px;
+}
+
+/* TANLASH section */
+
+.tanlash {
+    height: 100%;
+    margin-top: 20px;
+    display: flex;
+}
+
+.tanlash h1 {
+    text-align: left;
+    font-size: 40px;
+}
+
+.tanlash .left, .tanlash .right {
+    width: 50%;
+    border: 1px solid gray;
+    padding: 50px;
+}
+
+.bulim {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    transition: 0.3s all;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.bulim .ikonkacha_qutisi {
+    background-color: rgb(0, 115, 255);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.bulim .ikonkacha_qutisi .ikonkacha {
+    font-size: 25px;
+}
+
+.bulim:hover {
+    transform: translateX(20px);
+    background-color: rgb(190, 190, 190);
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.right .specialcart {
+    border-radius: 20px;
+    width: 600px;
+    height: 450px;
+    background-image: linear-gradient(135deg, rgba(4, 60, 246, 0.8), rgba(151, 0, 151, 0.8));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+/* Xizmatlar section */
+
+.xizmatlar {
+    height: 100%;
+}
+
+.xizmatlar h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.xizmatlar p {
+    text-align: center;
+}
+
+
+.services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service {
+    width: 250px;
+    height: 320px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 999;
+    transition: 0.3s all;
+}
+
+.service::before {
+    transition: 0.3s all;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transform: translateX(-100%);
+    background-color: rgb(255, 255, 255);
+    filter: blur(10px);
+    z-index: 0;
+}
+
+.service:hover::before {
+    transform: translateX(0%);
+}
+
+
+.service .icon {
+    background-color: rgb(9, 87, 255);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+    z-index: 99;
+    transition: 0.3s all;
+}
+
+.service .icon:hover {
+    transform: rotate(720deg);
+}
+.service .ikonkacha {
+    font-size: 35px;
+    color: white;
+}
+
+.service h3 {
+    font-size: 27px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 999;
+}
+
+.service p {
+    z-index: 999;
+    position: relative;
+}
